@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function CounterHooks() {
+export default function CounterHooks({ initialCount }) {
+  const [state, setState] = useState({ count: initialCount });
   return (
     <div>
       <button>-</button>
-      <span>0</span>
+      <span>{state.count}</span>
       <button>+</button>
     </div>
   );
