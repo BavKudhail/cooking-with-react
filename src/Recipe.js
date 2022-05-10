@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Recipe() {
+export default function Recipe({ name, cookTime, servings, instructions }) {
   return (
     <div>
-    {/* recipe */}
+      {/* recipe */}
       <div>
-        <h3>Plain Chicken</h3>
+        <h3>{name}</h3>
         <div>
           <button>Edit</button>
           <button>Delete</button>
@@ -14,15 +14,15 @@ export default function Recipe() {
       {/* cook time */}
       <div>
         <span>Cook Time:</span>
-        <span>1:45</span>
+        <span>{cookTime}</span>
       </div>
       {/* serving information */}
       <div>
         <span>Servings:</span>
-        <span>3</span>
+        <span>{servings}</span>
       </div>
       <div>
-        <div>1. Put salt on Chicken 2. Put chicken in over 3. Eat chicken</div>
+        <div>{instructions}</div>
       </div>
     </div>
   );
